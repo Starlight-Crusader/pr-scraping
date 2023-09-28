@@ -163,19 +163,3 @@ crawler.scrap_urls(crawler.base_catalog_url+"?page="+str(crawler.start_page))
 
 with open("cars.json", "w") as json_file:
     json.dump(crawler.scrap_all_ads(), json_file, indent=4)
-
-
-"""
-for li in col.find('ul').find_all('li'):
-                span_elements = li.find_all('span')
-                value = ""
-
-                try:
-                    value = span_elements[1].find('a').text
-                except:
-                    value = span_elements[1].text
-
-                key = span_elements[0].text
-
-                car[self.normalize_chars(key, '_')] = self.normalize_chars(value, ' ')
-"""
